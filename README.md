@@ -1,4 +1,4 @@
-# Meta Inc. (META) Stock Price Analysis and Forecasting
+# Meta Inc. (META) Stock Price Analysis Project
 
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.x](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/downloads/)
@@ -6,70 +6,35 @@
 
 ## Overview
 
-This repository contains a Python-based project focused on analyzing and forecasting the stock price of Meta Platforms, Inc. (ticker symbol: META). The current analysis provides a foundational understanding of the stock's historical performance and utilizes an Autoregressive Integrated Moving Average (ARIMA) model for short-term price prediction.
+This repository contains a project dedicated to the analysis and forecasting of Meta Platforms, Inc. (ticker symbol: META) stock price using Python. The project is structured to showcase different levels of analysis, from a foundational approach to a more advanced exploration.
 
-This project serves as a starting point, with plans for future expansion to include more advanced analytical techniques and a deeper exploration of factors influencing Meta's stock price in a separate, more in-depth notebook.
+## Repository Contents
 
-## Current Analysis (Notebook: `financial performance analysis of Meta Inc.ipynb`)
+This repository includes the following analyses:
 
-The initial analysis notebook (`financial performance analysis of Meta Inc.ipynb`) covers the following key steps:
+* **Beginner-Friendly Analysis (Notebook: `initial_meta_stock_analysis.ipynb`)**: This notebook provides an introductory analysis of Meta's stock price. It covers fundamental steps such as data acquisition, basic preprocessing, initial exploratory data analysis (EDA), and the application of a basic ARIMA model for short-term forecasting. This analysis is designed to be accessible and demonstrates core time series concepts.
 
-* **Data Acquisition:** Downloading historical stock price data for Meta Inc. from Yahoo Finance, spanning from January 2021 to December 2024.
-* **Data Preprocessing:** Handling missing daily stock data using linear interpolation to create a continuous time series suitable for analysis.
-* **Exploratory Data Analysis (Initial):**
-    * Visualizing the historical trend of Meta's stock price over the downloaded period.
-    * Calculating and presenting key financial ratios (Profit Margin, Debt-to-Equity Ratio, Return on Equity) based on available financial statements to provide a broader financial context.
-    * Examining year-over-year revenue growth.
-* **Time Series Forecasting (ARIMA Model):**
-    * Implementing an ARIMA(5,1,0) model to forecast the stock price for a 30-day horizon.
-    * Visualizing the forecasted price against the recent historical data.
-* **Model Evaluation:**
-    * Evaluating the performance of the fitted ARIMA model by predicting the stock price for the last 30 days of the dataset.
-    * Quantifying the model's accuracy using the Root Mean Squared Error (RMSE).
-    * Providing a visual comparison of the actual versus predicted stock prices for the evaluation period.
-
-## Planned Future Work (In-depth Analysis - Separate Notebook)
-
-A subsequent, more in-depth analysis will be conducted in a separate notebook and will aim to provide a more comprehensive understanding through:
-
-* **Advanced Exploratory Data Analysis:**
-    * Detailed trend analysis of key financial ratios over time.
-    * Correlation analysis between different financial metrics and the stock price.
-    * Stock price decomposition into trend, seasonality (if applicable), and residual components.
-    * Volatility analysis.
-* **Robust Model Selection and Comparison:**
-    * Formal stationarity testing of the time series data.
-    * Utilizing Autocorrelation Function (ACF) and Partial Autocorrelation Function (PACF) plots to inform ARIMA order selection.
-    * Model diagnostics and residual analysis.
-    * Potential comparison with other time series forecasting models (e.g., SARIMA for seasonality, Exponential Smoothing).
-* **Incorporating External Factors:**
-    * Exploration of potential external variables that may influence Meta's stock price (e.g., market indices, competitor performance, news sentiment).
-    * Consideration of multivariate time series models or machine learning approaches to incorporate these factors.
-* **Enhanced Evaluation and Validation:**
-    * Implementing train-validation-test splits for more rigorous model evaluation.
-    * Employing backtesting techniques (e.g., rolling forecasts) to assess out-of-sample performance.
-    * Potentially providing confidence intervals for forecasts.
+* **Advanced Analysis (Notebook: `meta_stock_analysis_advanced.ipynb`)**: This notebook delves into a more in-depth analysis of Meta's stock price. It builds upon the foundational work by incorporating advanced techniques such as detailed financial ratio trend analysis, correlation studies, consideration of potential external factors, exploration of alternative forecasting models (e.g., SARIMA), and more robust model evaluation and validation methodologies. This analysis highlights a more sophisticated understanding of time series analysis and financial data.
 
 ## Getting Started
 
-1.  **Prerequisites:** Ensure you have Python 3.x installed on your system. You can download it from [https://www.python.org/downloads/](https://www.python.org/downloads/).
-2.  **Installation:** Install the necessary Python libraries using pip:
+1.  **Prerequisites:** Ensure you have Python 3.x installed.
+2.  **Installation:** Install the necessary libraries:
     ```bash
     pip install pandas yfinance matplotlib statsmodels scikit-learn
     ```
 3.  **Running the Code:**
-    * Clone this repository to your local machine:
-        ```bash
-        git clone [https://github.com/datawarehouse11/your-repo-name.git](https://github.com/datawarehouse11/your-repo-name.git)
-        cd your-repo-name
-        ```
-        (Replace `your-repo-name` with the actual name of your repository).
-    * Open the `financial performance analysis of Meta Inc.ipynb` file using Jupyter Notebook or JupyterLab.
-    * Run the cells sequentially to execute the analysis and generate the forecast.
+    * Clone this repository.
+    * Open either `initial_meta_stock_analysis.ipynb` for the beginner-friendly analysis or `meta_stock_analysis_advanced.ipynb` for the more in-depth exploration using Jupyter Notebook or JupyterLab.
+    * Run the cells sequentially in the desired notebook.
+
+## Emphasizing Skill Progression
+
+This project intentionally includes two separate analyses to demonstrate a progression of skills in financial data analysis and time series forecasting. Viewers can observe the foundational techniques in the `initial_meta_stock_analysis.ipynb` and then see a more comprehensive and sophisticated approach in the `meta_stock_analysis_advanced.ipynb`.
 
 ## Contributing
 
-While this is primarily a personal project, any suggestions or feedback on the analysis or potential improvements are welcome.
+Suggestions and feedback are welcome, especially on potential improvements or further avenues of analysis.
 
 ## License
 
@@ -77,6 +42,21 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-Waydin Josephs (datawarehouse11)
+[Your Name / Your GitHub Username (datawarehouse11)]
 
 ---
+
+**How to Update Your `README.md`:**
+
+1.  **Edit Locally:** Open your `README.md` file in a text editor.
+2.  **Replace Content:** Replace the existing content with the updated template above, ensuring the notebook file names match yours.
+3.  **Save:** Save the changes to your `README.md` file.
+4.  **Stage, Commit, and Push:** In your terminal, navigate to your repository and run:
+
+    ```bash
+    git add README.md
+    git commit -m "Updated README to emphasize beginner and advanced analyses."
+    git push origin main
+    ```
+
+By updating your `README.md` in this way, you clearly communicate the distinction between the two analyses, highlighting your ability to approach the same problem with varying levels of complexity and sophistication. This is a great way to showcase your skills to potential viewers of your GitHub portfolio!
